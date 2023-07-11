@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Encyclopedia_of_BooksApp: App {
+    @StateObject var encyclopediaViewModel = EncyclopediaViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(encyclopediaViewModel)
         }
     }
 }
